@@ -37,7 +37,10 @@
     
 
     <script>
-          const provider = new ethers.providers.Web3Provider(window.ethereum, "ropsten");
+        //connect with wallet
+        window.ethereum.enable();
+        //call providers , web3.currentProvider = metamask
+        const provider = new ethers.providers.Web3Provider(window.ethereum, "ropsten");
 
         const MoodContractAddress ="0x0b571e86648fb55C202b84Dd3660c5C6e694Dc23";
         const MoodContractABI =[
